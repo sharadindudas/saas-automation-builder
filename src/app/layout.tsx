@@ -5,30 +5,30 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 
 const dmSans = DM_Sans({
-    subsets: ["latin"]
+  subsets: ["latin"],
 });
 export const metadata: Metadata = {
-    title: "Fuzzie.",
-    description: "Automate Your Work With Fuzzie."
+  title: "Fuzzie.",
+  description: "Automate Your Work With Fuzzie.",
 };
 
 export default function RootLayout({
-    children
+  children,
 }: Readonly<{
-    children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-    return (
-        <html lang="en" suppressHydrationWarning className="relative">
-            <body className={cn("relative antialiased", dmSans.className)}>
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme="dark"
-                    enableSystem
-                    disableTransitionOnChange
-                >
-                    {children}
-                </ThemeProvider>
-            </body>
-        </html>
-    );
+  return (
+    <html lang="en" suppressHydrationWarning className="relative">
+      <body className={cn("relative antialiased", dmSans.className)}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
+    </html>
+  );
 }

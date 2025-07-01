@@ -1,14 +1,14 @@
 import Sidebar from "@/components/sidebar";
 
 export default function MainLayout({
-    children
+  children,
 }: {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-    return (
-        <div className="flex overflow-hidden h-screen">
-            <Sidebar />
-            <div className="w-full">{children}</div>
-        </div>
-    );
+  return (
+    <div className="flex overflow-hidden h-screen">
+      <Sidebar />
+      <div className="w-full">{children}</div>
+    </div>
+  );
 }
